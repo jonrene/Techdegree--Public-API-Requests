@@ -2,10 +2,10 @@
  * Project 5 - Public API Requests
  * Game.js */
 
-// This function dynamically creates profile cards with the given list of employees and adds it to the main page
+// This will store employee object pulled from API. 
 let employees = [];
 
-// This function creates the employee ID cards for the main page.
+// This function dynamically creates profile cards with the given list of employees and adds it to the main page
 function createCards(employees){
     for(let i=0; i < employees.length; i++){
         // creates current user card for employee 
@@ -32,7 +32,6 @@ function createCards(employees){
 
         // creates header element to display employee name for current card and appends it to information container
         let employeeName = document.createElement("H3");
-        //employeeName.id = "name";
         employeeName.className = "card-name cap";
         employeeName.insertAdjacentHTML("beforeEnd", `${employees[i]['name']['first']} ${employees[i]['name']['last']}`);
         currentCardInfoContainer.append(employeeName);
